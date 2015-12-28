@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <center>
+        <img id="bulb" src="bulb_off.png" height="180">
+        <br>
+        <div id="checks">
+            <input id="check1" class="input_ hidden" type="checkbox" onchange="checkBulb()" name="check1">
+            <label class="inputlabel" for="check1"></label>
+            </input>
+            <input id="check2" class="input__ hidden" type="checkbox" onchange="checkBulb()" name="check2">
+            <label class="inputlabel_" for="check2"></label>
+            </input>
+        </div>
+    </center>
+
+    <script>
+        function checkBulb() {
+            switch_1 = document.getElementById('check1');
+            switch_2 = document.getElementById('check2');
+
+            console.log("Switch 1: " + switch_1.checked);
+            console.log("Switch 2: " + switch_2.checked);
+            console.log("--");
+
+            bulb_img = document.getElementById("bulb");
+            if (switch_1.checked && switch_2.checked) {
+                bulb_img.src = "bulb_on.png";
+            } else {
+                bulb_img.src = "bulb_off.png";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
